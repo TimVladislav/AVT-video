@@ -1,0 +1,34 @@
+// Place all the styles related to the videos controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.parallax-container {
+  h1{
+    color: white;
+    display: block;
+    text-align: center;
+    margin-top: 200px;
+    font-family: 'Lobster';
+  }
+}
+.post {
+    margin: 50px 0;
+    .title-post {
+        h3{
+            text-align: center;
+            font-family: 'Lobster';
+            .heart-title {
+                font-size: 24px;
+                color: red;
+                margin: 10px;
+            }
+        }
+        .line {
+            display: block;
+            height: 1px;
+            border-bottom: solid 1px #333;
+        }
+    }
+}
+.m-top {
+  margin-top: 100px;
+}

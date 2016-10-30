@@ -1,0 +1,9 @@
+<div class="m-top container">
+  <h2>Новое видео</h2>
+  <%= form_for :video, url: videos_path do |f| %>
+    <%= render 'form' %>
+    <div class="form-group">
+      <%= f.submit 'Добавить видеоролик', :class => "form-control btn" %>
+    </div>
+  <% end %>
+</div>

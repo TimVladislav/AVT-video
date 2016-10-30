@@ -1,0 +1,35 @@
+<div class="parallax-container">
+    <div class="parallax"><img src="home/assets/img/bg2.jpg"></div>
+    <h1>Мои работы</h1>
+</div>
+<% if user_signed_in? %>
+  <% if current_user.adm %>
+    <% @adm = 1 %>
+  <% end %>
+<% end %>
+<% if @adm %>
+  <a href="videos/new" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+<% end %>
+<div class="container">
+  <div class="row">
+  <% @videos.each do |video| %>
+    <div class="col s12 m12 l6">
+      <div class="card">
+        <div class="card-image">
+          <iframe width="100%" height="315" src="<%= video.content %>" frameborder="0" allowfullscreen></iframe>    
+        </div>
+        <div class="card-content">
+          <p><%= video.title %></p>
+        </div>
+        <div class="card-action">
+          <%= link_to 'Открыть', video_path(video) %>
+          <% if @adm %>
+            <%= link_to 'Редактировать', edit_video_path(video) %>
+            <%= link_to 'Удалить', video_path(video), method: :delete, data:{confirm: "Удалить '#{video.title}'?"} %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  </div>
+</div>

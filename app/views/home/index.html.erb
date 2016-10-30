@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="home/assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Lobster" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>AVT-video</title>
+</head>
+
+<body>
+    <div id="loading"><img src="home/assets/img/loading.gif" alt=""></div>
+    <div class="container-fluid hei">
+        <nav class="transparent z">
+            <div class="nav-wrapper p-r">
+                <ul id="slide-out" class="side-nav">
+                    <li>
+                        <div class="userView"> <img class="background" src="home/assets/img/services/wedding.jpg">
+                            <a href="#!user"><img class="circle" src="home/assets/img/services/anniversary.jpg"></a> <a href="#!name"><span class="white-text name">John Doe</span></a> <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a> </div>
+                    </li>
+                    <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+                    <li><a href="#!">Second Link</a></li>
+                    <li>
+                        <div class="divider"></div>
+                    </li>
+                    <li><a class="subheader">Subheader</a></li>
+                    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+                </ul> <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+                <a href="#" class="brand-logo center"><img src="home/assets/img/logo1.png" alt=""></a>
+                <ul id="nav-mobile-l" class="left hide-on-med-and-down n-l">
+                    <li><a href="sass.html">Обо мне</a></li>
+                    <li class="heart">&#x2764;</li>
+                    <li><a class="modal-trigger" href="#modal1">Контакты</a></li>
+                    <li class="heart">&#x2764;</li>
+                    <li><a href="collapsible.html">Услуги</a></li>
+                </ul>
+                <ul id="nav-mobile-r" class="right hide-on-med-and-down n-r">
+                    <li><a href="sass.html">Прайс-лист</a></li>
+                    <li class="heart">&#x2764;</li>
+                    <li><a href="badges.html">Блог</a></li>
+                    <li class="heart">&#x2764;</li>
+                    <li><a href="<%= videos_path %>">Мои работы</a></li>
+                    <% if user_signed_in? %>
+                      <li class="user"> <%= link_to 'Выйти', destroy_user_session_path, :method => :delete %> </li>
+                      <li class="user"><a href="persons/profile"><%= current_user.email %></a></li>
+                    <% else %>
+                      <li class="user"> <%= link_to 'Войти', new_user_session_path %>
+                      <li class="user"> <%= link_to 'Зарегистрироваться', new_user_registration_path %></li>
+                    <% end %>
+                </ul>
+            </div>
+        </nav>
+        <div id="modal1" class="modal modal-fixed-footer">
+            <div class="modal-content">
+                <h5>Вы можете связаться со мной одним из следующих способов:</h5>
+                <div class="row">
+                    <div class="col s4">
+                        <div class="head"> <i class="material-icons medium">contact_phone</i>
+                            <h6 class="contact">Моб. телефон</h6> </div>
+                    </div>
+                    <div class="col s4">
+                        <div class="head"> <i class="material-icons medium">email</i>
+                            <h6 class="contact">E-mail</h6> </div>
+                    </div>
+                    <div class="col s4">
+                        <div class="head"> <i class="material-icons medium">group</i>
+                            <h6 class="contact">Социальные сети</h6> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer"> <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Закрыть</a> </div>
+        </div>
+        <div class="parallax-container hei header-parallax">
+            <div class="parallax slider1"><img src="home/assets/img/bg.jpg"></div>
+            <div class="parallax slider2"><img src="home/assets/img/bg2.jpg"></div>
+            <div class="parallax slider3"><img src="home/assets/img/bg.jpg"></div>
+            <div class="parallax slider4"><img src="home/assets/img/bg2.jpg"></div>
+            <div class="parallax bg-black"></div>
+        </div>
+        <div class="title-cont">
+            <div class="title"> <span class="name-custom">A<span class="v">V</span>T
+                <br/>видео
+                <br/> </span>
+                <div class="under-title"> <span class="line"></span> <span class="text-descr">***Видеосъемка свадеб и торжеств***</span> <span class="line"></span> <span class="heart1">&#x2764;</span> <span class="heart2">&#x2764;</span> </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="fullscreen">
+        <div class="container">
+            <div class="post aboutme">
+                <div class="title-post">
+                    <h3><span class="heart-title">&#x2764;</span>Обо мне<span class="heart-title">&#x2764;</span></h3> <span class="line"></span> </div>
+                <div class="body-post">
+                    <div class="row">
+                        <div class="col s12 m4"> <img class="z-depth-3" src="home/assets/img/IAM.jpg" alt="" class=""> </div>
+                        <p class="body-title">Здравствуйте, уважаемый посетитель моего сайта!</p>
+                        <p class="body-content">Очень непросто написать о себе… Сейчас в интернете столько продукта связанного с видеосъёмкой! Все норовят предложить свои услуги в «красивой упаковке», рассказывают какие они профи, и как творчески, извините, «креативно» подходят к видеосъёмке. Может быть с точки зрения продвижения на рынке услуг по видеосъёмке это верно, хотя на поверку очень часто вся «креативность» сводится к кадрам вне резкости и полету квадрокоптера, а самая большая «креативность» это, естественно, цена. Почему-то бытует мнение, что чем дороже видеосъёмка, тем она лучше. Эта странность требует, наверное, психологических исследований. Хотя, конечно, каждый выбирает по себе. На мой взгляд задача оператора (не люблю почему-то слово «видеограф», какое-то оно не настоящее), так вот, задача оператора — передать те чувства и эмоции, которые испытывали молодожёны и гости свадьбы в день торжества, чтобы сохранить их в свадебном фильме. Сохранить, а главное подчеркнуть. И тогда, сколько бы лет не прошло, вы всегда сможете вернуться не только мыслями, но и сердцами в один из самых главных в вашей семье дней! Мой лучший фильм о свадьбе ещё не снят. Я уверен, что мы с вами обязательно это сделаем!</p>
+                        <p class="body-title">Видеосъемка в детских садах.</p>
+                        <p class="body-content">Видеосъемкой я занимаюсь уже лет десять. Приходилось снимать разное видео. Каждая новая задача это новые эмоции, новые трудности, но и новый бесценный опыт, который нигде не купишь. Очень люблю снимать в детских садах. Вот где шквал эмоций! Непосредственность детей это стопроцентный плюс к фильму! Но чтобы дети приняли тебя за «своего» надо заслужить их доверие. А это очень непросто. Дети всегда чувствуют фальшь. Надо мыслить как они, разбудить в своей душе ребёнка и тогда отличные эмоциональные кадры станут настоящим украшением фильма, а родители увидят своего ребёнка в детском саду таким, какой он есть — озорным, весёлым, капризным, задумчивым и рассудительным, в общем — разным, но настоящим! А это, как я уже сказал выше, я и ценю больше всего в видеосъемке. Этот сайт создан для вашего удобства. Здесь представлены примеры моих работ, а также информация для связи со мной. Сайт постоянно совершенствуется. Информация об услугах обновляется. Надеюсь мои работы Вам понравятся, буду рад сотрудничеству</p>
+                        <p class="body-title">С уважением, Андрей Тимошенко.</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="post services">
+                <div class="title-post">
+                    <h3><span class="heart-title">&#x2764;</span>Услуги<span class="heart-title">&#x2764;</span></h3> <span class="line"></span> </div>
+                <div class="body-post">
+                    <div class="row">
+                        <div class="service col s12 m6 l3"> <img src="home/assets/img/services/wedding.jpg" alt="">
+                            <p class="bg-service"> </p>
+                            <div class="outline"></div>
+                            <a href="" class=""> <span class="v-align"></span> <span class="service-title">Видеосъемка свадеб</span> </a>
+                        </div>
+                        <div class="service col s12 m6 l3"> <img src="home/assets/img/services/anniversary.jpg" alt="">
+                            <p class="bg-service"> </p>
+                            <div class="outline"></div>
+                            <a href="" class=""> <span class="v-align"></span> <span class="service-title">Видеосъемка торжеств</span> </a>
+                        </div>
+                        <div class="service col s12 m6 l3"> <img src="home/assets/img/services/matinee.jpg" alt="">
+                            <p class="bg-service"> </p>
+                            <div class="outline"></div>
+                            <a href="" class=""> <span class="v-align"></span> <span class="service-title">Видеосъемка утренников</span> </a>
+                        </div>
+                        <div class="service col s12 m6 l3"> <img src="home/assets/img/services/triumph.jpg" alt="">
+                            <p class="bg-service"> </p>
+                            <div class="outline"></div>
+                            <a href="" class=""> <span class="v-align"></span> <span class="service-title">Видеосъемка выпускных</span> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdn.rawgit.com/iserdmi/afterlag-js/2.0.2/dist/jquery.afterlag.min.js"></script>
+    <script type="text/javascript" src="home/assets/js/all.js"></script>
+    <script type="text/javascript" src="home/assets/js/slider.js"></script>
+    <script type="text/javascript" src="home/assets/js/materialize.min.js"></script>
+    <script>
+        $.afterlag(function () {
+            $('#loading').hide();
+            Materialize.fadeInImage($('nav'));
+            Materialize.fadeInImage($('.title-cont'));
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Avtvideo</title>
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa|Lobster" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<nav class="transparent z">
+            <div class="nav-wrapper p-r">
+                <ul id="slide-out" class="side-nav">
+                    <li>
+                        <div class="userView"> <img class="background" src="/home/assets/img/services/wedding.jpg">
+                            <a href="#!user"><img class="circle" src="/home/assets/img/services/anniversary.jpg"></a> <a href="#!name"><span class="white-text name">John Doe</span></a> <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a> </div>
+                    </li>
+                    <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+                    <li><a href="#!">Second Link</a></li>
+                    <li>
+                        <div class="divider"></div>
+                    </li>
+                    <li><a class="subheader">Subheader</a></li>
+                    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+                </ul> <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+                <a href="/" class="brand-logo center"><img src="/home/assets/img/logo1.png" alt=""></a>
+                <ul id="nav-mobile-l" class="left hide-on-med-and-down n-l">
+                    <li><a href="sass.html">Обо мне</a></li>
+                    <li class="heart">&#x2764;</li>
+                    <li><a class="modal-trigger" href="#modal1">Контакты</a></li>
+                    <li class="heart">&#x2764;</li>
+                    <li><a href="collapsible.html">Услуги</a></li>
+                </ul>
+                <ul id="nav-mobile-r" class="right hide-on-med-and-down n-r">
+                    <li><a href="sass.html">Прайс-лист</a></li>
+                    <li class="heart">&#x2764;</li>
+                    <li><a href="badges.html">Блог</a></li>
+                    <li class="heart">&#x2764;</li>
+                    <li><a href="collapsible.html">Мои работы</a></li>
+                    <% if user_signed_in? %>
+                      <li class="user"> <%= link_to 'Выйти', destroy_user_session_path, :method => :delete %> </li>
+                      <li class="user"><a href="persons/profile"><%= current_user.email %></a></li>
+                    <% else %>
+                      <li class="user"> <%= link_to 'Войти', new_user_session_path %>
+                      <li class="user"> <%= link_to 'Зарегистрироваться', new_user_registration_path %></li>
+                    <% end %>
+                </ul>
+            </div>
+        </nav>
+        <div id="modal1" class="modal modal-fixed-footer">
+            <div class="modal-content">
+                <h5>Вы можете связаться со мной одним из следующих способов:</h5>
+                <div class="row">
+                    <div class="col s4">
+                        <div class="head"> <i class="material-icons medium">contact_phone</i>
+                            <h6 class="contact">Моб. телефон</h6> </div>
+                    </div>
+                    <div class="col s4">
+                        <div class="head"> <i class="material-icons medium">email</i>
+                            <h6 class="contact">E-mail</h6> </div>
+                    </div>
+                    <div class="col s4">
+                        <div class="head"> <i class="material-icons medium">group</i>
+                            <h6 class="contact">Социальные сети</h6> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer"> <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Закрыть</a> </div>
+        </div>
+<%= yield %>
+
+</body>
+<footer class="page-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">Всякая информация</h5>
+                <p class="grey-text text-lighten-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni illo ut quod sint nostrum voluptatem natus ullam asperiores doloremque commodi eveniet eum totam quis accusantium odio a inventore, mollitia molestiae ratione. Tempora beatae nisi sed optio assumenda aliquid dignissimos vitae incidunt laborum. Illo blanditiis eos quas unde facilis asperiores, rem.</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Новые видео</h5>
+                <ul>
+                    <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container"> © 2016 AVT-video <a class="grey-text text-lighten-4 right" href="#!">varsantim@rambler.ru</a> </div>
+    </div>
+</footer>
+</html>

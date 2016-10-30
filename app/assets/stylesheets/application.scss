@@ -1,0 +1,56 @@
+@import 'materialize';
+@import 'videos.scss';
+.transparent {
+    background: transparent !important;
+    box-shadow: none;
+}
+ul>li>a:hover {
+    color: red;
+    background: transparent !important;
+}
+.n-l {
+    position: absolute !important;
+    right: 55%;
+}
+.n-r {
+    position: absolute !important;
+    left: 55%;
+    width: 40%;
+}
+.user {
+    float: right;
+}
+.button-collapse {
+    height: 93px !important;
+}
+.button-collapse>i {
+    line-height: 93px !important;
+    margin-left: 20px;
+}
+.nav-wrapper {
+    height: 93px !important;
+}
+.heart {
+    color: red;
+    line-height: 93px;
+}
+.left>li>a,
+.right>li>a {
+    line-height: 93px !important;
+}
+.parallax>img {
+    width: 100% !important;
+}
+.parallax-container {
+   
+}
+.z {
+    z-index: 1000;
+    position: absolute;
+    top: 0;
+}
+.head>i,
+.contact {
+    display: block;
+    text-align: center;
+}
