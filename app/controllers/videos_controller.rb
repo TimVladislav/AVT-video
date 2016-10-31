@@ -3,7 +3,7 @@ class VideosController < ApplicationController
   before_action :find_video_by_id, only: [:show, :edit, :update, :destroy]
 
   def index
-    @videos = Video.all
+    @videos = Video.all.order("created_at DESC")
   end
   def show
   end
@@ -14,9 +14,9 @@ class VideosController < ApplicationController
   end
   def update
     if @video.update(video_params)
-      redirect_to "/"
+      redirect_to videos_path
     else
-      render 'edit'
+      render params
     end
   end
   def create

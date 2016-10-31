@@ -1,3 +1,13 @@
-<%= label_tag(:video_title, "Название ролика") %>
-<%= text_field(:video, :title, class: "form-control", placeholder: "Название ролика") %>
-<%= text_field(:video, :content, class: "form-control", placeholder: "Ссылка на видео с youtube") %>
+<div class="input-field">
+  <%= label_tag(:video_title, "Название ролика") %>
+  <%= text_field(:video, :title, class: "form-control") %>
+</div>
+<div class="row">
+  <div class="input-field col s6">
+    <%= label_tag(:video_content, 'Ссылка на видео с youtube.com') %>
+    <%= text_field(:video, :content, class: "form-control") %>
+  </div>
+  <div class="input-field col s6">
+    <%= select(:video, :category, options_for_select([["Свадьба"],["Досвадебное"],["Юбилей"],["Слайд-шоу"],["Выпускной"],["Детский сад"]])) %>
+  </div>
+</div>

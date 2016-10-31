@@ -10,6 +10,15 @@
     font-family: 'Lobster';
   }
 }
+.add-video {
+  margin: 20px;
+}
+.rel {
+  position: relative;
+}
+.card {
+  margin-top: 30px;
+}
 .post {
     margin: 50px 0;
     .title-post {
@@ -31,4 +40,9 @@
 }
 .m-top {
   margin-top: 100px;
+  min-height: 500px;
+}
+.bg-nav {
+  height: 93px;
+  background: #333;
 }

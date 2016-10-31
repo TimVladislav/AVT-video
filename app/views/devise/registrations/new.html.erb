@@ -1,4 +1,8 @@
-<h2>Sign up</h2>
+<div class="bg-nav"></div>
+<div class="container" style="min-height: 500px; margin-top: 50px;">
+  <div class="row">
+    <div class="col s4 offset-s4">
+      <h2>Регистрация</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
@@ -11,7 +15,7 @@
   <div class="field">
     <%= f.label :password %>
     <% if @validatable %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <em>(Минимум <%= @minimum_password_length %> символов)</em>
     <% end %><br />
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
@@ -20,10 +24,13 @@
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
-
+  <br />
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Зарегистрироваться", class: "btn" %>
   </div>
 <% end %>
-
+<br />
 <%= render "devise/shared/links" %>
+    </div>
+  </div>
+</div>

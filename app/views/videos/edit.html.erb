@@ -1,0 +1,10 @@
+<div class="bg-nav"></div>
+<div class="m-top container">
+  <h2>Редактирование видео</h2>
+  <%= form_for :video, url: video_path(@video), method: :patch do |f| %>
+    <%= render 'form' %>
+    <div class="form-group">
+      <%= f.submit 'Сохранить изменения', :class => "form-control btn" %>
+    </div>
+  <% end %>
+</div>

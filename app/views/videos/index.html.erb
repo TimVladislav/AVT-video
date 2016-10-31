@@ -7,10 +7,11 @@
     <% @adm = 1 %>
   <% end %>
 <% end %>
-<% if @adm %>
-  <a href="videos/new" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
-<% end %>
-<div class="container">
+<div class="container rel">
+  <% if @adm %>
+    <a href="videos/new" class="btn-floating btn-large waves-effect waves-light red add-video"><i class="material-icons">add</i></a>
+  <% end %>
+
   <div class="row">
   <% @videos.each do |video| %>
     <div class="col s12 m12 l6">
