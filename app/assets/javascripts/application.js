@@ -26,5 +26,10 @@ jQuery(function($){
     }
   );
   $('select').material_select();
+  $.afterlag(function () {
+    $('#loading').hide();
+    Materialize.fadeInImage($('nav'));
+  });
+
   });
 });

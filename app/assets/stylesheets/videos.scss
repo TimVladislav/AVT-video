@@ -19,6 +19,11 @@
 .card {
   margin-top: 30px;
 }
+.edit-video-btn {
+  position: absolute !important;
+  top: -80px;
+  z-index:0;
+}
 .post {
     margin: 50px 0;
     .title-post {

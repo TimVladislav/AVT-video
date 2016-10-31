@@ -9,6 +9,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div id="loading"><img src="home/assets/img/loading.gif" alt=""></div>
+
 <nav class="transparent z">
             <div class="nav-wrapper p-r">
                 <ul id="slide-out" class="side-nav">
@@ -69,6 +71,9 @@
             <div class="modal-footer"> <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Закрыть</a> </div>
         </div>
 <%= yield %>
+
+<script src="https://cdn.rawgit.com/iserdmi/afterlag-js/2.0.2/dist/jquery.afterlag.min.js"></script>
+
 
 </body>
 <footer class="page-footer">

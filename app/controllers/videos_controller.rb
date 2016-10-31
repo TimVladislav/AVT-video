@@ -6,6 +6,12 @@ class VideosController < ApplicationController
     @videos = Video.all.order("created_at DESC")
   end
   def show
+    @save = @video.content.to_s[0..11] + "ss" + @video.content.to_s[12..-1]
+    if user_signed_in?
+      if current_user.adm
+        @adm = true
+      end
+    end
   end
   def new
     @video = Video.new
@@ -35,7 +41,9 @@ class VideosController < ApplicationController
   private
     def ifadm
       if user_signed_in?
-        unless current_user.adm
+        if current_user.adm
+          @adm = true
+        else
           redirect_to "/"
         end
       else
